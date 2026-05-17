@@ -44,8 +44,22 @@
             best loot lies deepest, and the clock is always closing in.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#playtest">Join the Playtest</a>
-            <a class="button button-secondary" href="#wishlist">Wishlist on Steam</a>
+            <button
+              class="button button-primary"
+              type="button"
+              data-modal-title="Playtest link soon"
+              data-modal-copy="Here the playtest download link will open."
+            >
+              Join the Playtest
+            </button>
+            <button
+              class="button button-secondary"
+              type="button"
+              data-modal-title="Steam page soon"
+              data-modal-copy="Here the Steam wishlist page will open."
+            >
+              Wishlist on Steam
+            </button>
           </div>
         </div>
       </section>
@@ -166,15 +180,38 @@
             Join the first wave of runners and help shape the balance, routes, and
             risk of <strong>DEAD DROP</strong>.
           </p>
-          <div class="hero-actions" id="playtest">
-            <a class="button button-primary" href="#playtest">Join the Playtest</a>
-            <a class="button button-secondary" id="wishlist" href="#wishlist">
+          <div class="hero-actions">
+            <button
+              class="button button-primary"
+              type="button"
+              data-modal-title="Playtest link soon"
+              data-modal-copy="Here the playtest download link will open."
+            >
+              Join the Playtest
+            </button>
+            <button
+              class="button button-secondary"
+              type="button"
+              data-modal-title="Steam page soon"
+              data-modal-copy="Here the Steam wishlist page will open."
+            >
               Wishlist on Steam
-            </a>
+            </button>
           </div>
         </div>
       </section>
     </main>
+
+    <dialog class="cta-modal" id="cta-modal" aria-labelledby="cta-modal-title">
+      <div class="cta-modal-shell">
+        <p class="eyebrow">Coming soon</p>
+        <h2 id="cta-modal-title"></h2>
+        <p id="cta-modal-copy"></p>
+        <form method="dialog">
+          <button class="button button-primary" type="submit">OK</button>
+        </form>
+      </div>
+    </dialog>
 
     <footer class="site-footer section-shell">
       <span>DEAD DROP</span>

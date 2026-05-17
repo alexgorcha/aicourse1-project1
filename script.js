@@ -1,22 +1,44 @@
 const revealItems = document.querySelectorAll(".reveal");
 const heroImage = document.querySelector(".hero-media img");
 const finalImage = document.querySelector(".final-cta-media img");
+const modal = document.querySelector("#cta-modal");
+const modalTitle = document.querySelector("#cta-modal-title");
+const modalCopy = document.querySelector("#cta-modal-copy");
+const modalTriggers = document.querySelectorAll("[data-modal-title]");
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.16,
-  },
-);
+if ("IntersectionObserver" in window) {
+  document.documentElement.classList.add("reveal-ready");
 
-revealItems.forEach((item) => revealObserver.observe(item));
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.16,
+    },
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
+modalTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    if (!modal || !modalTitle || !modalCopy) {
+      return;
+    }
+
+    modalTitle.textContent = trigger.dataset.modalTitle;
+    modalCopy.textContent = trigger.dataset.modalCopy;
+    modal.showModal();
+  });
+});
 
 let ticking = false;
 
