@@ -7,7 +7,31 @@
       name="description"
       content="DEAD DROP is a cinematic solo extraction FPS set in a rain-soaked abandoned megacity."
     />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <title>DEAD DROP — Solo Extraction FPS</title>
+    <link rel="canonical" href="https://alexgorcha.github.io/aicourse1-project1/" />
+    <meta property="og:title" content="DEAD DROP — Solo Extraction FPS" />
+    <meta
+      property="og:description"
+      content="DEAD DROP is a cinematic solo extraction FPS set in a rain-soaked abandoned megacity."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alexgorcha.github.io/aicourse1-project1/" />
+    <meta
+      property="og:image"
+      content="https://alexgorcha.github.io/aicourse1-project1/assets/images/hero.jpg"
+    />
+    <meta property="og:image:alt" content="DEAD DROP key art showing a rain-soaked megacity" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DEAD DROP — Solo Extraction FPS" />
+    <meta
+      name="twitter:description"
+      content="DEAD DROP is a cinematic solo extraction FPS set in a rain-soaked abandoned megacity."
+    />
+    <meta
+      name="twitter:image"
+      content="https://alexgorcha.github.io/aicourse1-project1/assets/images/hero.jpg"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +39,34 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://alexgorcha.github.io/aicourse1-project1/#website",
+            "url": "https://alexgorcha.github.io/aicourse1-project1/",
+            "name": "DEAD DROP",
+            "description": "DEAD DROP is a cinematic solo extraction FPS set in a rain-soaked abandoned megacity."
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://alexgorcha.github.io/aicourse1-project1/#webpage",
+            "url": "https://alexgorcha.github.io/aicourse1-project1/",
+            "name": "DEAD DROP — Solo Extraction FPS",
+            "description": "DEAD DROP is a cinematic solo extraction FPS set in a rain-soaked abandoned megacity.",
+            "isPartOf": {
+              "@id": "https://alexgorcha.github.io/aicourse1-project1/#website"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://alexgorcha.github.io/aicourse1-project1/assets/images/hero.jpg"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
@@ -30,8 +82,23 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-media" aria-hidden="true">
           <picture>
-            <source srcset="assets/images/hero.jpg" type="image/jpeg" />
-            <img src="assets/images/hero.jpg" alt="" />
+            <source
+              srcset="
+                assets/images/hero-640w.jpg 640w,
+                assets/images/hero-960w.jpg 960w,
+                assets/images/hero.jpg 1672w
+              "
+              sizes="100vw"
+              type="image/jpeg"
+            />
+            <img
+              src="assets/images/hero.jpg"
+              alt=""
+              width="1672"
+              height="941"
+              fetchpriority="high"
+              decoding="async"
+            />
           </picture>
         </div>
         <div class="hero-overlay" aria-hidden="true"></div>
@@ -113,43 +180,97 @@
           <figure class="shot shot-wide reveal">
             <img
               src="assets/images/screenshot-street-hud.jpg"
+              srcset="
+                assets/images/screenshot-street-hud-640w.jpg 640w,
+                assets/images/screenshot-street-hud-960w.jpg 960w,
+                assets/images/screenshot-street-hud.jpg 1672w
+              "
+              sizes="(max-width: 860px) calc(100vw - 32px), min(1180px, calc(100vw - 48px))"
               alt="First-person street raid with amber HUD in the rain"
+              width="1672"
+              height="941"
               loading="lazy"
+              decoding="async"
             />
           </figure>
           <figure class="shot reveal">
             <img
               src="assets/images/screenshot-inventory.jpg"
+              srcset="
+                assets/images/screenshot-inventory-640w.jpg 640w,
+                assets/images/screenshot-inventory-960w.jpg 960w,
+                assets/images/screenshot-inventory.jpg 1672w
+              "
+              sizes="(max-width: 860px) calc(100vw - 32px), min(581px, calc((100vw - 66px) / 2))"
               alt="Inventory interface open over scavenged supplies"
+              width="1672"
+              height="941"
               loading="lazy"
+              decoding="async"
             />
           </figure>
           <figure class="shot reveal">
             <img
               src="assets/images/screenshot-extraction.jpg"
+              srcset="
+                assets/images/screenshot-extraction-640w.jpg 640w,
+                assets/images/screenshot-extraction-960w.jpg 960w,
+                assets/images/screenshot-extraction.jpg 1672w
+              "
+              sizes="(max-width: 860px) calc(100vw - 32px), min(581px, calc((100vw - 66px) / 2))"
               alt="Extraction tram arriving with a countdown timer on screen"
+              width="1672"
+              height="941"
               loading="lazy"
+              decoding="async"
             />
           </figure>
           <figure class="shot reveal">
             <img
               src="assets/images/screenshot-rooftop.jpg"
+              srcset="
+                assets/images/screenshot-rooftop-640w.jpg 640w,
+                assets/images/screenshot-rooftop-960w.jpg 960w,
+                assets/images/screenshot-rooftop.jpg 1672w
+              "
+              sizes="(max-width: 860px) calc(100vw - 32px), min(581px, calc((100vw - 66px) / 2))"
               alt="Rooftop traversal above the abandoned megacity"
+              width="1672"
+              height="941"
               loading="lazy"
+              decoding="async"
             />
           </figure>
           <figure class="shot reveal">
             <img
               src="assets/images/screenshot-subway.jpg"
+              srcset="
+                assets/images/screenshot-subway-640w.jpg 640w,
+                assets/images/screenshot-subway-960w.jpg 960w,
+                assets/images/screenshot-subway.jpg 1672w
+              "
+              sizes="(max-width: 860px) calc(100vw - 32px), min(581px, calc((100vw - 66px) / 2))"
               alt="Flooded subway concourse with minimal HUD"
+              width="1672"
+              height="941"
               loading="lazy"
+              decoding="async"
             />
           </figure>
           <figure class="shot reveal">
             <img
               src="assets/images/screenshot-drone.jpg"
+              srcset="
+                assets/images/screenshot-drone-640w.jpg 640w,
+                assets/images/screenshot-drone-960w.jpg 960w,
+                assets/images/screenshot-drone.jpg 1672w
+              "
+              sizes="(max-width: 860px) calc(100vw - 32px), min(581px, calc((100vw - 66px) / 2))"
               alt="Patrol drone crossing a wet service alley"
+              width="1672"
+              height="941"
               loading="lazy"
+              decoding="async"
             />
           </figure>
         </div>
@@ -170,7 +291,20 @@
 
       <section class="final-cta" aria-labelledby="cta-title">
         <div class="final-cta-media" aria-hidden="true">
-          <img src="assets/images/screenshot-vault.jpg" alt="" loading="lazy" />
+          <img
+            src="assets/images/screenshot-vault.jpg"
+            srcset="
+              assets/images/screenshot-vault-640w.jpg 640w,
+              assets/images/screenshot-vault-960w.jpg 960w,
+              assets/images/screenshot-vault.jpg 1672w
+            "
+            sizes="100vw"
+            alt=""
+            width="1672"
+            height="941"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div class="final-cta-overlay" aria-hidden="true"></div>
         <div class="final-cta-content section-shell reveal">
