@@ -5,6 +5,10 @@ const modal = document.querySelector("#cta-modal");
 const modalTitle = document.querySelector("#cta-modal-title");
 const modalCopy = document.querySelector("#cta-modal-copy");
 const modalTriggers = document.querySelectorAll("[data-modal-title]");
+const shotModal = document.querySelector("#shot-modal");
+const shotModalImage = document.querySelector("#shot-modal-image");
+const shotModalClose = document.querySelector(".shot-modal-close");
+const shotTriggers = document.querySelectorAll("[data-full-image]");
 
 if ("IntersectionObserver" in window) {
   document.documentElement.classList.add("reveal-ready");
@@ -38,6 +42,28 @@ modalTriggers.forEach((trigger) => {
     modalCopy.textContent = trigger.dataset.modalCopy;
     modal.showModal();
   });
+});
+
+shotTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    if (!shotModal || !shotModalImage) {
+      return;
+    }
+
+    shotModalImage.src = trigger.dataset.fullImage;
+    shotModalImage.alt = trigger.dataset.fullAlt || "";
+    shotModal.showModal();
+  });
+});
+
+shotModalClose?.addEventListener("click", () => {
+  shotModal?.close();
+});
+
+shotModal?.addEventListener("click", (event) => {
+  if (event.target === shotModal) {
+    shotModal.close();
+  }
 });
 
 let ticking = false;
